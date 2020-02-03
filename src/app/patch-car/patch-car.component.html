@@ -1,0 +1,30 @@
+<div class="content" role="main">
+
+  <form (ngSubmit)="onSubmit()">
+    <label for="carId">Car Id: </label>
+    <input [(ngModel)]="carToPatch.id" type="number" id="carId" name="carId" required>
+
+    <label for="carMark">Mark:</label>
+    <input [(ngModel)]="carToPatch.mark" type="text" id="carMark" name="carMark" required>
+
+    <label for="carModel">Model:</label>
+    <input [(ngModel)]="carToPatch.model" type="text" id="carModel" name="carModel" required>
+
+    <label for="carColor">Color:</label>
+    <input [(ngModel)]="carToPatch.color" type="text" id="carColor" name="carColor" required>
+
+    <button type="submit">Patch Car</button>
+  </form>
+
+  <div *ngIf="carPatched != null">
+    <h2>Car Patched</h2>
+
+    <ul>
+      <li>Car Id: {{carPatched.id}}</li>
+      <li>Mark: {{carPatched.mark}}</li>
+      <li>Model: {{carPatched.model}}</li>
+      <li>Color: {{carPatched.color}}</li>
+    </ul>
+  </div>
+
+</div>

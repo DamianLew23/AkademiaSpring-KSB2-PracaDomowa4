@@ -1,0 +1,13 @@
+<div class="content" role="main">
+
+  <form>
+    <label for="carId">Car Id: </label>
+    <input [(ngModel)]="idCar" type="number" id="carId" name="carId" required>
+    <button type="submit" (click)="deleteCar(idCar)">Delete Car</button>
+  </form>
+
+  <div *ngIf="isDeleteCar == true">
+    <h2>Car ID: {{idCar}} Deleted</h2>
+  </div>
+
+</div>

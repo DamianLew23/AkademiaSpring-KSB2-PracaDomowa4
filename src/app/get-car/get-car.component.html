@@ -1,0 +1,20 @@
+<div class="content" role="main">
+
+  <form>
+    <label for="carId">Car Id: </label>
+    <input [(ngModel)]="idCar" type="number" id="carId" name="carId" required>
+    <button type="submit" (click)="getCar(idCar)">Get Car</button>
+  </form>
+
+  <div *ngIf="car != null">
+    <h2>Car ID: {{car.id}}</h2>
+
+    <ul>
+      <li>Car Id: {{car.id}}</li>
+      <li>Mark: {{car.mark}}</li>
+      <li>Model: {{car.model}}</li>
+      <li>Color: {{car.color}}</li>
+    </ul>
+  </div>
+
+</div>

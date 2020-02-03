@@ -1,0 +1,30 @@
+<div class="content" role="main">
+
+  <form (ngSubmit)="onSubmit()">
+    <label for="carId">Car Id: </label>
+    <input [(ngModel)]="carToAdd.id" type="number" id="carId" name="carId" required>
+
+    <label for="carMark">Mark:</label>
+    <input [(ngModel)]="carToAdd.mark" type="text" id="carMark" name="carMark" required>
+
+    <label for="carModel">Model:</label>
+    <input [(ngModel)]="carToAdd.model" type="text" id="carModel" name="carModel" required>
+
+    <label for="carColor">Color:</label>
+    <input [(ngModel)]="carToAdd.color" type="text" id="carColor" name="carColor" required>
+
+    <button type="submit">Add Car</button>
+  </form>
+
+  <div *ngIf="carAdded != null">
+    <h2>Car Added</h2>
+
+    <ul>
+      <li>Car Id: {{carAdded.id}}</li>
+      <li>Mark: {{carAdded.mark}}</li>
+      <li>Model: {{carAdded.model}}</li>
+      <li>Color: {{carAdded.color}}</li>
+    </ul>
+  </div>
+
+</div>
